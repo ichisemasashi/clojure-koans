@@ -1,4 +1,4 @@
-(Japanese)[README-jp.md]
+(Japanese)[https://github.com/ichisemasashi/clojure-koans/tree/japanese-transration/README-jp.md]
 
 # Clojure Koans
 
