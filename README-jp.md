@@ -1,5 +1,33 @@
 # Clojure Koans
 
+### To READ DIFF
+```
+git diff master:./01_equalities.clj japanese-transration:./01_equalities.clj
+git diff master:./02_strings.clj japanese-transration:./02_strings.clj
+git diff master:./03_lists.clj japanese-transration:./03_lists.clj
+git diff master:./04_vectors.clj japanese-transration:./04_vectors.clj
+git diff master:./05_sets.clj japanese-transration:./05_sets.clj
+git diff master:./06_maps.clj japanese-transration:./06_maps.clj
+git diff master:./07_functions.clj japanese-transration:./07_functions.clj
+git diff master:./08_conditionals.clj japanese-transration:./08_conditionals.clj
+git diff master:./09_higher_order_functions.clj japanese-transration:./09_higher_order_functions.clj
+git diff master:./10_runtime_polymorphism.clj japanese-transration:./10_runtime_polymorphism.clj
+git diff master:./11_lazy_sequences.clj japanese-transration:./11_lazy_sequences.clj
+git diff master:./12_sequence_comprehensions.clj japanese-transration:./12_sequence_comprehensions.clj
+git diff master:./13_creating_functions.clj japanese-transration:./13_creating_functions.clj
+git diff master:./14_recursion.clj japanese-transration:./14_recursion.clj
+git diff master:./15_destructuring.clj japanese-transration:./15_destructuring.clj
+git diff master:./16_refs.clj japanese-transration:./16_refs.clj
+git diff master:./17_atoms.clj japanese-transration:./17_atoms.clj
+git diff master:./18_quote.clj japanese-transration:./18_quote.clj
+git diff master:./19_datatypes.clj japanese-transration:./19_datatypes.clj
+git diff master:./20_java_interop.clj japanese-transration:./20_java_interop.clj
+git diff master:./21_partition.clj japanese-transration:./21_partition.clj
+git diff master:./22_group_by.clj japanese-transration:./22_group_by.clj
+git diff master:./23_meta.clj japanese-transration:./23_meta.clj
+git diff master:./24_macros.clj japanese-transration:./24_macros.clj
+```
+
 <!--
 The Clojure Koans are a fun and easy way to get started with Clojure - no
 experience assumed or required.  Just follow the instructions below to start
