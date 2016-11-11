@@ -26,26 +26,20 @@
             (r-infix ~others)))))
 
 (meditations
-  "Macros are like functions created at compile time"
   "マクロは、コンパイル時で作成される機能のようです"
   (= __ (hello "Macros!"))
 
-  "I can haz infix?"
   "私は、haz挿入辞を缶詰にします？"
   (= __ (infix (9 + 1)))
 
-  "Remember, these are nothing but code transformations"
   "思い出してください。これらはコード変化だけです"
   (= __ (macroexpand '(infix (9 + 1))))
 
-  "You can do better than that - hand crafting FTW!"
   "あなたはそれよりよくすることができます－手がFTWを巧みに作ります！"
   (= __ (macroexpand '(infix-better (10 * 2))))
 
-  "Things don't always work as you would like them to... "
   "あなたは彼らが欲しくて、ものは必ずしも働きません... "
   (= __ (macroexpand '(infix-better ( 10 + (2 * 3)))))
 
-  "Really, you don't understand recursion until you understand recursion"
   "本当に、再帰を理解するまで、あなたは再帰を理解しません"
   (= 36 (r-infix (10 + (2 * 3) + (4 * 5)))))
