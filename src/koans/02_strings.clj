@@ -55,29 +55,37 @@
   または、同様な最後のインデックス"
   (= 13 (string/last-index-of "hello world, hello" "hello"))
 
-  "But when something doesn't exist, nothing is found"
-  (= __ (string/index-of "hello world" "bob"))
+  "But when something doesn't exist, nothing is found
+   でも、何かが存在しない時は、何も見つからない"
+  (= nil (string/index-of "hello world" "bob"))
 
-  "Sometimes you don't want whitespace cluttering the front and back"
-  (= __ (string/trim "  \nhello world \t \n"))
+  "Sometimes you don't want whitespace cluttering the front and back
+   時には、前後にある空白が欲くないこともある"
+  (= "hello world" (string/trim "  \nhello world \t \n"))
 
-  "You can check if something is a char"
-  (= __ (char? \c))
+  "You can check if something is a char
+  なにかが「文字」であるか確認できる"
+  (= true (char? \c))
 
-  "But it may not be"
-  (= __ (char? "a"))
+  "But it may not be
+  しかし、これは「文字」ではない"
+  (= false (char? "a"))
 
-  "But chars aren't strings"
-  (= __ (string? \b))
+  "But chars aren't strings
+   また、「文字」は「文字列」ではありません"
+  (= false (string? \b))
 
   "Strings are strings"
-  (= true (string? __))
+  (= true (string? "b"))
 
-  "Some strings may be blank"
-  (= __ (string/blank? ""))
+  "Some strings may be blank
+   ある文字列は「空白」です。"
+  (= true (string/blank? ""))
 
-  "Even if at first glance they aren't"
-  (= __ (string/blank? " \n \t  "))
+  "Even if at first glance they aren't
+   たとえ、ぱっと見で違っていても"
+  (= true (string/blank? " \n \t  "))
 
-  "However, most strings aren't blank"
-  (= __ (string/blank? "hello?\nare you out there?")))
+  "However, most strings aren't blank
+   しかしながら、ほとんどの文字列は「空白」ではない"
+  (= false (string/blank? "hello?\nare you out there?")))
