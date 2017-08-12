@@ -10,33 +10,40 @@
                    "!")))
 
 (defmulti diet (fn [x] (:eater x)))
-(defmethod diet :herbivore [a] __)
-(defmethod diet :carnivore [a] __)
-(defmethod diet :default [a] __)
+(defmethod diet :herbivore [a] (str (:name a) " eats veggies."))
+(defmethod diet :carnivore [a] (str (:name a) " eats animals."))
+(defmethod diet :default [a] (str "I don't know what " (:name a) " eats."))
 
 (meditations
-  "Some functions can be used in different ways - with no arguments"
-  (= __ (hello))
+  "Some functions can be used in different ways - with no arguments
+   ある関数は、いろいろな方法で利用される。引数なし。"
+  (= "Hello World!" (hello))
 
-  "With one argument"
-  (= __ (hello "world"))
+  "With one argument
+   引数1つ。"
+  (= "Hello, you silly world." (hello "world"))
 
-  "Or with many arguments"
-  (= __
+  "Or with many arguments
+   または、さらに多くの引数"
+  (= "Hello to this group: Peter, Paul, Mary!"
      (hello "Peter" "Paul" "Mary"))
 
-  "Multimethods allow more complex dispatching"
+  "Multimethods allow more complex dispatching
+   マルチメソッドはさらに複雑な切り替えができます"
   (= "Bambi eats veggies."
      (diet {:species "deer" :name "Bambi" :age 1 :eater :herbivore}))
 
-  "Animals have different names"
+  "Animals have different names
+   動物は他の名前もある"
   (= "Thumper eats veggies."
      (diet {:species "rabbit" :name "Thumper" :age 1 :eater :herbivore}))
 
-  "Different methods are used depending on the dispatch function result"
+  "Different methods are used depending on the dispatch function result
+   切り替え関数の結果によって、異なるメソッドが使われる"
   (= "Simba eats animals."
      (diet {:species "lion" :name "Simba" :age 1 :eater :carnivore}))
 
-  "You may use a default method when no others match"
+  "You may use a default method when no others match
+   何もマッチしないときにはdefaultメソッドを使う"
   (= "I don't know what Rich Hickey eats."
      (diet {:name "Rich Hickey"})))
